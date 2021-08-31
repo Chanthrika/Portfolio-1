@@ -1,0 +1,20 @@
+
+
+//Projects Section
+document.addEventListener('DOMContentLoaded', function(event) {
+
+    for(let i = 0;i<document.getElementsByClassName('more').length;i++){
+
+        document.getElementsByClassName('more')[i].style.visibility = 'visible';
+        document.getElementsByClassName('less')[i].style.visibility = 'visible';
+  
+       document.getElementsByClassName('more')[i].onclick = function() {
+        document.getElementsByClassName('card')[i].classList.toggle('do-flip');
+        };
+  
+        document.getElementsByClassName('less')[i].onclick = function() {
+        document.getElementsByClassName('card')[i].classList.toggle('do-flip');
+        };
+    };
+  
+  });

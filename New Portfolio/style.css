@@ -345,10 +345,10 @@ border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    /*height: 100vh;*/
     font-family: Inter;
     font-style: normal;
-    padding-left: 3rem;
+    margin-top: 10rem;
 }
 
 .projects h1{
@@ -359,6 +359,7 @@ border: none;
 
 .projects .heading{
     align-self: flex-start;
+    padding-left: 3rem;
     margin-bottom: 3rem;
 }
 
@@ -366,29 +367,34 @@ border: none;
     font-weight: normal;
     font-size: 30px;
     line-height: 36px;
-    letter-spacing: 0.1em;
     color: #A2A2A2;
 }
 
 .cards-container{
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     flex-wrap: wrap;
+    margin: 0;
 }
 
 .card-front, .card-back{
-    margin: 1rem;
+    padding: 2rem;
+    margin: 1.5rem 0;
     height: 525px;
-    /*width: 400px;*/
-    width: 45vw;
+    width: 40vw;
     border-radius: 10px;
-    background-image: linear-gradient(to bottom,
-    rgba(0,0,0) 0%,
-    rgba(17,17,17,0.6) 80%), url('Rectangle\ 1.png');
     background-size: cover;
     position: relative;
     color: #fff;
 
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card{
+    padding: 10px;
     -o-transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
     -ms-transition: all 1s ease-in-out;
@@ -399,6 +405,15 @@ border: none;
     transform-style: preserve-3d;
 }
 
+.card-back{
+    position: absolute;
+    top: 0;
+    -o-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
 .do-flip {
     -o-transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
@@ -406,79 +421,149 @@ border: none;
     transform: rotateY(-180deg);
   }
 
-.card:nth-child(2) .card-front, .card:nth-child(2) .card-back{
+.card:nth-child(1) .card-front{
+    background-image: linear-gradient(to bottom,
+    rgba(0,0,0) 0%,
+    rgba(17,17,17,0.6) 80%), url('Rectangle\ 1.png');
+}
+
+.card:nth-child(2) .card-front{
     background-image: linear-gradient(to bottom,
     rgba(0,0,0) 0%,
     rgba(17,17,17,0.6) 80%), url('Rectangle\ 2.png');
 }
 
-.card:nth-child(3) .card-front, .card:nth-child(3) .card-back{
+.card:nth-child(3) .card-front{
     background-image: linear-gradient(to bottom,
     rgba(0,0,0) 0%,
     rgba(17,17,17,0.6) 80%), url('Rectangle\ 3.png');
 }
 
-.card:nth-child(4) .card-front, .card:nth-child(4) .card-back{
+.card:nth-child(4) .card-front{
     background-image: linear-gradient(to bottom,
     rgba(0,0,0) 0%,
     rgba(17,17,17,0.6) 80%), url('Rectangle\ 4.png');
 }
 
-.card:nth-child(5) .card-front, .card:nth-child(5) .card-back{
+.card:nth-child(5) .card-front{
     background-image: linear-gradient(to bottom,
     rgba(0,0,0) 0%,
     rgba(17,17,17,0.6) 80%), url('Rectangle\ 5.png');
 }
 
-.card:nth-child(6) .card-front, .card:nth-child(6) .card-back{
+.card:nth-child(6) .card-front{
     background-image: linear-gradient(to bottom,
     rgba(0,0,0) 0%,
     rgba(17,17,17,0.6) 80%), url('Rectangle\ 6.png');
 }
 
 
+.card:nth-child(1) .card-back{
+    background-image: linear-gradient(to bottom,
+    rgba(0,0,0) 0%,
+    rgba(17,17,17,0.6) 200%), url('Rectangle\ 1.png');
+}
+
+.card:nth-child(2) .card-back{
+    background-image: linear-gradient(to bottom,
+    rgba(0,0,0) 0%,
+    rgba(17,17,17,0.6) 200%), url('Rectangle\ 2.png');
+}
+
+.card:nth-child(3) .card-back{
+    background-image: linear-gradient(to bottom,
+    rgba(0,0,0) 0%,
+    rgba(17,17,17,0.6) 200%), url('Rectangle\ 3.png');
+}
+
+.card:nth-child(4) .card-back{
+    background-image: linear-gradient(to bottom,
+    rgba(0,0,0) 0%,
+    rgba(17,17,17,0.6) 200%), url('Rectangle\ 4.png');
+}
+
+.card:nth-child(5) .card-back{
+    background-image: linear-gradient(to bottom,
+    rgba(0,0,0) 0%,
+    rgba(17,17,17,0.6) 200%), url('Rectangle\ 5.png');
+}
+
+.card:nth-child(6) .card-back{
+    background-image: linear-gradient(to bottom,
+    rgba(0,0,0) 0%,
+    rgba(17,17,17,0.6) 200%), url('Rectangle\ 6.png');
+}
+
 .projects h2{
-    position: absolute;
-    top: 350px;
-    left: 30px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    width: 50%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 46px;
+    color: #FFFFFF;
+
 }
 
 .card-front p, .card-back p{
-    position: absolute;
-    top: 400px;
-    left: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: #A2A2A2;
 }
 
-.card-front button{
-    color: #fff;
-    padding: 10px 20px;
+.card-back .content{
+    font-size: 20px;
+    width: 95%;
+}
+
+
+.card-back h2{
+    width: 90%;
+}
+
+.card-front button, .card-back button{
+    padding: 30px 0;
     border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #f77062;
-    position: absolute;
-    top: 440px;
-    left: 30px;
-    font-size: 1rem;
+    visibility: hidden;
+    background-color: transparent;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #A1A1A1;
     cursor: pointer;
 }
 
-.card-front:hover, .card-back:hover{
+.card-front:hover{
     transform: scale(1.075);
     transition: 0.2s ease-in;
 }
 
 @media screen and (max-width: 960px) {
-    .projects{
-        height: 1400px;
+
+    .projects .heading{
+        padding-left: 1rem;
     }
 
     .projects h1{
-        font-size: 1.2rem;
+        font-size: 50px;
+    }
+
+    .projects p{
+        font-size: 25px;
+    }
+
+    .content{
+        font-size: 20px;
     }
 
     .card-front, .card-back{
-        width: 40vw;
+        width: 75vw;
+        height: 600px;
     }
 
 }

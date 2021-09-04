@@ -340,7 +340,7 @@ border: none;
 
 
 /*Projects Section*/
-.projects{
+.projects, .contactMe{
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -348,10 +348,10 @@ border: none;
     /*height: 100vh;*/
     font-family: Inter;
     font-style: normal;
-    margin-top: 10rem;
+    margin: 15rem 0;
 }
 
-.projects h1{
+.projects h1, .contactMe h1{
     font-weight: bold;
     font-size: 80px;
     line-height: 97px;
@@ -363,7 +363,7 @@ border: none;
     margin-bottom: 3rem;
 }
 
-.projects .heading h4{
+.projects .heading h4, .contactMe h4{
     font-weight: normal;
     font-size: 30px;
     line-height: 36px;
@@ -568,3 +568,60 @@ border: none;
 
 }
 
+.contactMeContainer{
+    margin: 0;
+    display: flex;
+}
+
+.contactMe p{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #7B7B7B;
+}
+
+.followMeOn, .latestProj{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactMe div{
+    padding: 2rem;
+}
+
+.contactMe hr{
+    height: 1.5px;
+    border: none;
+    width: 90vw;
+    background-color: #A1A1A1;
+    margin: 3rem 0;
+}
+
+.contactMe a{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 160%;
+    color: #000000;
+}
+
+.contactMeContainer h4{
+    color: #000000;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    padding-bottom: 3rem;
+}
+
+.contactMe span{
+    color: #000000;
+}
+
+@media screen and (max-width: 960px) {
+
+    .contactMeContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
